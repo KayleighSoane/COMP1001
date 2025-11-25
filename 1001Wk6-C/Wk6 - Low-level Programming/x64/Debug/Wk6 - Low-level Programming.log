@@ -1,0 +1,18 @@
+﻿  Low-level Programming.cpp
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Low-level Programming\Low-level Programming.cpp(22,11): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+      C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Low-level Programming\Low-level Programming.cpp(22,11):
+      this argument is used as a buffer size
+  
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Low-level Programming\Low-level Programming.cpp(24,46): warning C4474: 'scanf_s' : too many arguments passed for format string
+      C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Low-level Programming\Low-level Programming.cpp(24,46):
+      placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+  
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Low-level Programming\Low-level Programming.cpp(26,39): warning C4474: 'scanf_s' : too many arguments passed for format string
+      C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Low-level Programming\Low-level Programming.cpp(26,39):
+      placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+  
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Low-level Programming\Low-level Programming.cpp(32,21): warning C4474: 'scanf_s' : too many arguments passed for format string
+      C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Low-level Programming\Low-level Programming.cpp(32,21):
+      placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+  
+  Wk6 - Low-level Programming.vcxproj -> C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\Module-Tasks\COMP1001 tasks\1001Wk6-C\x64\Debug\Wk6 - Low-level Programming.exe
