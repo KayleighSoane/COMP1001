@@ -13,7 +13,22 @@
 //		IF COORDS ARE OUT OF BOUNDS, SET VALUE TO 0
 
 // B -	NEED CODE TO ACCESS EVERY FILE - MAKE LOOP FOR A1/A2/A3 ETC
+//		NEED M AND N TO HAVE DIMENSIONS OF EACH FILE
 //		NEED TO DYNAMICALLY ALLOCATE ARRAYS BASED ON IMAGE DIMENSIONS
+
+// PROGRESS:
+// M and N aggined to each images dimensions
+// File paths update number for each file and read correctly
+// Output image is correct and it is stored correctly
+// 
+// Problem - a1.pgm is a P2, which causes program to exit
+// Problem with files?
+// Some files ARE P2 but that shouldn't stop it running
+// FIXED!!
+// I read the code wrong - i thought a file being P2 was a problem and that all the images should be P5
+// I thought the if statement in read_image() that checked for P2 images was an error case
+// i put freearrays() above the exit_failure in the EOF if statement of P2, which stopped the whole program running
+// Worked again when i removed it.
 
 
 //function declarations
@@ -22,29 +37,24 @@ void read_image(char* filename);
 void write_image2(char* filename);
 void openfile(char* filename, FILE** finput);
 int getint(FILE* fp);
+void createarrays();
+void createfilepaths();
+void changefilepaths(int num);
+void freearrays();
 
 
 //CRITICAL POINT: images' paths - You need to change these paths
-		char IN[] = "C:\\Users\\kayle\\OneDrive - University of Plymouth\\Github Repositories\\COMP1001\\COMP1001 Assignments\\2 - Report\\q1_input\\a1.pgm";
-		char OUT[] = "C:\\Users\\kayle\\OneDrive - University of Plymouth\\Github Repositories\\COMP1001\\COMP1001 Assignments\\2 - Report\\q1_output\\a1_output.pgm";
-
+char* IN = NULL;
+char* OUT = NULL; // Declarations
 
 //IMAGE DIMENSIONS
-// How do i set it to apply to each images dimensions?
-	// N = each image x
-	// M = each image y
-
-#define N 460  //rows
-#define M 475  //cols
-
+int M = 0; //cols = x
+int N = 0; //rows = y
 
 
 //CRITICAL POINT:these arrays are defined statically. Consider creating these arrays dynamically instead.
-	// change arrays depending on image size?
-	// Loop so can read N and M for each image and create arrays of that size
-	
-unsigned char input_image[N * M];//input image total area
-unsigned char output_image[N * M];//output image total area
+unsigned char* input_image = NULL;
+unsigned char* output_image = NULL; //Declarations
 
 
 const signed char GxMask[3][3] = {
@@ -59,18 +69,45 @@ const signed char GyMask[3][3] = {
 	{1,2,1}
 };
 
+void freearrays() {
+	if (input_image) {
+		free(input_image);
+		printf("\n input_image freed");
+	}
+	if (output_image) {
+		free(output_image);
+		printf("\n output_image freed");
+	}
+	if (IN) {
+		free(IN);
+		printf("\n IN filepath freed");
+	}
+	if (OUT) {
+		free(OUT);
+		printf("\n OUT filepath freed");
+	}
+}
+
 char header[100];
 errno_t err;
 
 int main() {
 
+	createfilepaths();
 
-	read_image(IN);//read image from disc
+	for (int i = 0; i < 31; i++) {
 
-	edge_detection(); //apply edge detection
+		changefilepaths(i);
 
-	write_image2(OUT); //store output image to the disc
+		read_image(IN);//read image from disc
 
+		edge_detection(); //apply edge detection
+
+		write_image2(OUT); //store output image to the disc
+		
+	}
+
+	freearrays();
 
 	return 0;
 }
@@ -122,6 +159,8 @@ void read_image(char* filename)
 	printf("\nReading %s image from disk ...", filename);
 	finput = NULL;
 	openfile(filename, &finput);
+	createarrays(); //	moved to here from main because createarrays() needs the info above it, 
+	//					and the function needs info from createarrays() for the rest of its execution.
 
 	if ((header[0] == 'P') && (header[1] == '5')) { //if P5 image
 
@@ -149,6 +188,7 @@ void read_image(char* filename)
 	}
 	else {
 		printf("\nproblem with reading the image");
+		freearrays();
 		exit(EXIT_FAILURE);
 	}
 
@@ -165,12 +205,11 @@ void write_image2(char* filename)
 	FILE* foutput;
 	int i, j;
 
-
-
 	printf("  Writing result to disk ...\n");
 
 	if ((err = fopen_s(&foutput, filename, "wb")) != NULL) {
 		fprintf(stderr, "Unable to open file %s for writing\n", filename);
+		freearrays();
 		exit(-1);
 	}
 
@@ -199,6 +238,7 @@ void openfile(char* filename, FILE** finput)
 
 	if ((err = fopen_s(finput, filename, "rb")) != NULL) {
 		fprintf(stderr, "Unable to open file %s for reading\n", filename);
+		freearrays();
 		exit(-1);
 	}
 
@@ -210,17 +250,43 @@ void openfile(char* filename, FILE** finput)
 
 
 	//CRITICAL POINT: AT THIS POINT YOU CAN ASSIGN x0,y0 to M,N 
-	// printf("\n Image dimensions are M=%d,N=%d",M,N);
-
+	M = x0;
+	N = y0;
+	printf("\n Image dimensions are M=%d,N=%d",M,N);
+	
 
 	x = getint(*finput); /* read and throw away the range info */
-	//printf("\n range info is %d",x);
+	printf("\n range info is %d",x);
 
 }
 
 
 
 //CRITICAL POINT: you can define your routines here that create the arrays dynamically; now, the arrays are defined statically.
+void createarrays() {
+	input_image = (unsigned char*)malloc(size_t(M) * size_t(N)); //use size_t since M and N are ints
+	output_image = (unsigned char*)malloc(size_t(M) * size_t(N));
+	if (input_image == NULL || output_image == NULL) {
+		fprintf(stderr, "createarrays() failed\n");
+		freearrays();
+		exit(EXIT_FAILURE);
+	}
+}
+
+void createfilepaths() {
+	//creating dynamic strings with a character that i want to change every loop and replace with an int?
+	IN = (char*)malloc(512); 
+	OUT = (char*)malloc(512);
+	if (IN == NULL || OUT == NULL) {
+		fprintf(stderr, "createfilepaths() failed\n");
+		exit(EXIT_FAILURE);
+	}
+}
+
+void changefilepaths(int num) {
+	sprintf_s(IN, 512, "C:\\Users\\kayle\\OneDrive - University of Plymouth\\Github Repositories\\COMP1001\\COMP1001 Assignments\\2 - Report\\q1_input\\a%d.pgm", num);
+    sprintf_s(OUT, 512, "C:\\Users\\kayle\\OneDrive - University of Plymouth\\Github Repositories\\COMP1001\\COMP1001 Assignments\\2 - Report\\q1_output\\a%d_output.pgm", num);
+} // included the file name in the path instead of concatenating them separately
 
 
 
