@@ -1,7 +1,7 @@
 ﻿  q1.cpp
-C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q1\q1.cpp(172,39): warning C4474: 'fscanf_s' : too many arguments passed for format string
-      C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q1\q1.cpp(172,39):
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q1\q1.cpp(182,39): warning C4474: 'fscanf_s' : too many arguments passed for format string
+      C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q1\q1.cpp(182,39):
       placeholders and their parameters expect 1 variadic arguments, but 2 were provided
   
-C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q1\q1.cpp(146,6): warning C4101: 'c': unreferenced local variable
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q1\q1.cpp(155,6): warning C4101: 'c': unreferenced local variable
   q1.vcxproj -> C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\x64\Debug\q1.exe

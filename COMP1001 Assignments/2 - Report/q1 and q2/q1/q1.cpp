@@ -44,8 +44,8 @@ void freearrays();
 
 
 //CRITICAL POINT: images' paths - You need to change these paths
-char* IN = NULL;
-char* OUT = NULL; // Declarations
+char* IN = 0;
+char* OUT = 0; // Declarations
 
 //IMAGE DIMENSIONS
 int M = 0; //cols = x
@@ -53,8 +53,8 @@ int N = 0; //rows = y
 
 
 //CRITICAL POINT:these arrays are defined statically. Consider creating these arrays dynamically instead.
-unsigned char* input_image = NULL;
-unsigned char* output_image = NULL; //Declarations
+unsigned char* input_image = 0;
+unsigned char* output_image = 0; //Declarations
 
 
 const signed char GxMask[3][3] = {
@@ -275,12 +275,15 @@ void createarrays() {
 
 void createfilepaths() {
 	//creating dynamic strings with a character that i want to change every loop and replace with an int?
-	IN = (char*)malloc(512); 
-	OUT = (char*)malloc(512);
-	if (IN == NULL || OUT == NULL) {
+	char* newIN = (char*)realloc(IN, 512 * sizeof(char)); 
+	char* newOUT = (char*)realloc(OUT, 512 * sizeof(char));
+	if (newIN == NULL || newOUT == NULL) {
 		fprintf(stderr, "createfilepaths() failed\n");
+		freearrays();
 		exit(EXIT_FAILURE);
 	}
+	IN = newIN;
+	OUT = newOUT; // created newIN and newOUT to save IN and OUT from potential memory leaks from realloc failing
 }
 
 void changefilepaths(int num) {

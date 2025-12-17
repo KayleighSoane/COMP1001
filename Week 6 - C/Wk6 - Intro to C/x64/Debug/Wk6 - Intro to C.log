@@ -1,0 +1,55 @@
+﻿  Wk6 - Intro to C.cpp
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(81,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(82,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(82,9):
+      consider using '%zu' in the format string
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(83,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(83,9):
+      consider using '%zu' in the format string
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(84,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(84,9):
+      consider using '%zu' in the format string
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(85,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(85,9):
+      consider using '%zu' in the format string
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(86,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(86,9):
+      consider using '%zu' in the format string
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(87,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(87,9):
+      consider using '%zu' in the format string
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(88,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(88,9):
+      consider using '%zu' in the format string
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(89,9): warning C4477: 'printf' : format string '%lu' requires an argument of type 'unsigned long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(89,9):
+      consider using '%zu' in the format string
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(104,10): warning C4477: 'scanf_s' : format string '%19s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(104,10):
+      this argument is used as a buffer size
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(114,10): warning C4477: 'scanf_s' : format string '%999s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(114,10):
+      this argument is used as a buffer size
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(116,10): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(116,10):
+      this argument is used as a buffer size
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(128,10): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(128,10):
+      this argument is used as a buffer size
+  
+C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(129,9): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'size_t'
+      C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\Wk6 - Intro to C\Wk6 - Intro to C.cpp(129,9):
+      consider using '%zd' in the format string
+  
+  Wk6 - Intro to C.vcxproj -> C:\Users\ksoane\Documents\GitHub\Module-Tasks\COMP1001 tasks\1001Wk6-C\x64\Debug\Wk6 - Intro to C.exe

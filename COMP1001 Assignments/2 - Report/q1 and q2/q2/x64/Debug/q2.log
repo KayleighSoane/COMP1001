@@ -1,0 +1,6 @@
+﻿  q2.cpp
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q2\q2.cpp(19,13): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q2\q2.cpp(19,26): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q2\q2.cpp(24,9): warning C4101: 'start_1': unreferenced local variable
+C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\q2\q2.cpp(24,18): warning C4101: 'end_1': unreferenced local variable
+  q2.vcxproj -> C:\Users\kayle\OneDrive - University of Plymouth\Github Repositories\COMP1001\COMP1001 Assignments\2 - Report\q1 and q2\x64\Debug\q2.exe
