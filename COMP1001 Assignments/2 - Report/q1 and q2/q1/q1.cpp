@@ -17,18 +17,9 @@
 //		NEED TO DYNAMICALLY ALLOCATE ARRAYS BASED ON IMAGE DIMENSIONS
 
 // PROGRESS:
-// M and N aggined to each images dimensions
+// M and N assined to each images dimensions
 // File paths update number for each file and read correctly
 // Output image is correct and it is stored correctly
-// 
-// Problem - a1.pgm is a P2, which causes program to exit
-// Problem with files?
-// Some files ARE P2 but that shouldn't stop it running
-// FIXED!!
-// I read the code wrong - i thought a file being P2 was a problem and that all the images should be P5
-// I thought the if statement in read_image() that checked for P2 images was an error case
-// i put freearrays() above the exit_failure in the EOF if statement of P2, which stopped the whole program running
-// Worked again when i removed it.
 
 
 //function declarations
@@ -42,6 +33,8 @@ void createfilepaths();
 void changefilepaths(int num);
 void freearrays();
 
+char header[100];
+errno_t err;
 
 //CRITICAL POINT: images' paths - You need to change these paths
 char* IN = 0;
@@ -88,8 +81,6 @@ void freearrays() {
 	}
 }
 
-char header[100];
-errno_t err;
 
 int main() {
 
