@@ -40,7 +40,7 @@ int main() {
 	//q2();
 	//q3();
 
-	q1_vec();
+	//q1_vec();
 	//q2_vec();
 	//q3_vec();
 
@@ -49,7 +49,7 @@ int main() {
 
 	printf("Time in seconds is %f\n", end_1 - start_1 );//print the ex.time
 
-	checkq1_vec();
+	//checkq1_vec();
 	//checkq2_vec();
 	//checkq3_vec(); 
 
@@ -143,7 +143,7 @@ void checkq1_vec() {
 }
 
 void q2_vec() {
-	// multiply a * b, multiplr c * d, then do ab + cd + A
+	// multiply a * b, multiply c * d, then do ab + cd + A
 	__m256 uone, vone, utwo, vtwo, aarr, tone, tsum, finv;
 
 	for (int i = 0; i < N; i++) {
@@ -203,14 +203,10 @@ void q3_vec() {
 		zero = _mm256_hadd_ps(zero, zero); // horizontal add 2
 		zero = _mm256_hadd_ps(zero, zero); // horizontal add now 4
 
-		//float temp[8];
-		//_mm256_storeu_ps(temp, zero);
-		//w[i] = temp[0] + temp[1] + temp[2] + temp[3] + temp[4] + temp[5] + temp[6] + temp[7];
-
 		for (int j = ((N / 8) * 8); j < N; j++) {
 			float sum = alpha * A[i][j] * u1[j];
 			w[i] += sum;
-			printf("Padding used for A[%d][%d]\n", i, j);
+			printf("Padding used for w[%d]\n", i);
 		}
 
 		// ALL ANSWERS ARE ZERO BECAUSE A[i][j] IS ZERO, WHICH IS WHY CHECKER FAILS
